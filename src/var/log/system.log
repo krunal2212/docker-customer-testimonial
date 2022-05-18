@@ -1,0 +1,18 @@
+[2022-05-18T18:24:28.371596+00:00] main.ERROR: AMQP topology installation failed: Deprecated Functionality: trim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/vendor/magento/framework-amqp/Config.php on line 143
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(8192, 'trim(): Passing...', '/var/www/html/v...', 143)
+#1 /var/www/html/vendor/magento/framework-amqp/Config.php(143): trim(NULL)
+#2 /var/www/html/vendor/magento/framework-amqp/Config.php(169): Magento\Framework\Amqp\Config->createConnection()
+#3 /var/www/html/vendor/magento/framework-amqp/TopologyInstaller.php(86): Magento\Framework\Amqp\Config->getChannel()
+#4 /var/www/html/vendor/magento/module-amqp/Setup/Recurring.php(36): Magento\Framework\Amqp\TopologyInstaller->install()
+#5 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1117): Magento\Amqp\Setup\Recurring->install(Object(Magento\Setup\Module\Setup), Object(Magento\Setup\Model\ModuleContext))
+#6 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(895): Magento\Setup\Model\Installer->handleDBSchemaData(Object(Magento\Setup\Module\Setup), 'schema', Array)
+#7 [internal function]: Magento\Setup\Model\Installer->installSchema(Array)
+#8 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(385): call_user_func_array(Array, Array)
+#9 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(238): Magento\Setup\Model\Installer->install(Array)
+#10 /var/www/html/vendor/symfony/console/Command/Command.php(255): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/vendor/symfony/console/Application.php(1009): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#16 {main} [] []
